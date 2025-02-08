@@ -1,0 +1,28 @@
+*{
+margin:0px
+padding:0px;
+}
+body{
+margin:60px;
+}
+input[type="text"]{
+margin-left:60px;
+}
+select{
+margin-left:40px;
+}
+button{
+justify-content:center;
+align-text:center;
+margin-left:500px;
+margin-bottom:100px;
+border-radius:10px;
+border:solid thin lightblue;
+font-size:25pt;
+width:200px;
+}
+button:hover{
+background-color:lightgrey;
+border:solid thin grey;
+}
+

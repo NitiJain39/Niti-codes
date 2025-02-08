@@ -1,0 +1,97 @@
+*{
+margin:0px
+}
+.disfc{
+display:flex;
+align-items:center;
+}
+header{
+padding:20px;
+justify-content:space-between;
+}
+a{
+text-decoration:none;
+margin-right:6px;
+padding:5px 10px;
+color:black;
+transition:all 1s;
+}
+#menu{
+font-size:20pt;
+}
+.active{
+border-bottom:solid blue;
+transition:all 0s;}
+#menu a:hover,#projects a:hover{
+border:dashed thin black;
+}
+#hi{
+background-color:yellow;
+width:280px;
+border-radius:12px;
+}
+#hi a{
+justify-content:centre;
+align-items:center;
+align-text:center;
+color:black;
+margin-left:25px;
+}
+#hi:hover{
+background-color:lightgrey;
+border:solid darkgrey;
+}
+#gr{
+color:grey;
+font-size:38pt;
+}
+#gr h1{
+display:span;
+background-image:linear-gradient(to right,blue 0%,purple 30%,red);
+background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+main{
+margin:20px;
+justify-content:space-between;
+}
+footer{
+justify-content:center;
+}
+img{
+border-radius:80px;
+}
+img:hover{
+margin:0px;
+border:solid black;
+}
+#download h3{
+background-color:purple;
+color:white;
+border-radius:6px;
+padding-left:10px;
+width:160px;
+}
+#text{
+padding-top:30px;
+padding-left:20px;
+margin-left:40px;
+box-shadow:10px 10px 50px 2px grey;
+height:320;
+}
+#projects{
+margin:20px;
+justify-content:space-between;
+}
+#projects a{
+text-decoration:underline;
+margin-right:6px;
+padding:5px 10px;
+color:darkorange;
+font-size:15pt;
+}
+#projects h4 a{
+font-size:18pt;
+color:brown;
+}
+

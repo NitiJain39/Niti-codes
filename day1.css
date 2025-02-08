@@ -1,0 +1,42 @@
+body{
+    overflow: hidden;
+}
+section{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width:40%;
+    height: fit-content;
+    margin-left: 30%;
+    margin-right: 30%;
+    border: 2px solid black;
+    margin-top:60px;
+    
+}
+section:hover{
+    transform: translateX(100px);
+    transition: all 1s ease;
+}
+header {
+background-color:rgb(150, 228, 228);
+text-align: center;
+align-items: center;
+justify-content: center;
+width: auto;
+padding: 8px 10px;
+margin-bottom: 20px;
+}
+footer {
+background-color:rgb(150, 228, 228);
+text-align: center;
+align-items: center;
+justify-content: center;
+width: auto;
+padding: 3px 10px;
+
+}
+#mid #top{
+    text-align: left;
+    padding-left: 20px;
+}
+
