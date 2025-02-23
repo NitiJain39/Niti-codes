@@ -1,16 +1,17 @@
 body{
     overflow: hidden;
+    margin: 15px; 
 }
 section{
     align-items: center;
     justify-content: center;
     text-align: center;
-    width:40%;
-    height: fit-content;
-    margin-left: 30%;
-    margin-right: 30%;
+    width:45%;
+    height: 90%;
+    margin-left: 27.5%;
+    margin-right: 27.5%;
     border: 2px solid black;
-    margin-top:60px;
+    
     
 }
 section:hover{
@@ -23,8 +24,9 @@ text-align: center;
 align-items: center;
 justify-content: center;
 width: auto;
-padding: 8px 10px;
-margin-bottom: 20px;
+padding: 3px 10px;
+margin-bottom: 10px;
+height: fit-content;    
 }
 footer {
 background-color:rgb(150, 228, 228);
@@ -32,7 +34,8 @@ text-align: center;
 align-items: center;
 justify-content: center;
 width: auto;
-padding: 3px 10px;
+height: fit-content;
+padding: 1px 10px;
 
 }
 #mid #top{

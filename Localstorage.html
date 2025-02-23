@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storing Data Locally</title>
+</head>
+<body>
+    <!-- <input type="text" id="name" placeholder="Enter your name"><br><br>
+    <button type="button" onclick="savename()"> Save</button>
+    <h3 id="saved"> </h3>
+    <script>
+        function savename(){
+            var n = document.getElementById('name').value;
+            sname=document.getElementById('saved');
+            localStorage.setItem('name', n);
+            sname.innerHTML = localStorage.getItem('name');
+        } -->
+    <input type="text" id="name" placeholder="Enter your name">&nbsp;
+    <input type="text" id="email" placeholder="Enter your email"><br><br>
+    <input type="text" id="fulln" placeholder="Enter your full name">&nbsp;
+    <input type="text" id="city" placeholder="Enter your city"><br><br>
+    <button type="button" onclick="savedata()">Save</button><br> <br>
+    <button type="button" onclick="showdata()">Show Student Data </button>
+    <div id="StudentInfo"> </div>
+    
+    <script>
+        var Arr=[];
+        function savedata(){
+            var n = document.getElementById('name').value;
+            var e = document.getElementById('email').value;
+            var fn = document.getElementById('fulln').value;
+            var c = document.getElementById('city').value;
+            var stuinfo = {
+                name: n,
+                email: e,
+                fullname: fn,
+                city: c
+            };
+            Arr.push(stuinfo);
+            localStorage.setItem('student', JSON.stringify(Arr));            
+        }
+        function showdata(){
+            var stustring = localStorage.getItem('student');
+            var ListStu = JSON.parse(stustring);
+            document.getElementById('StudentInfo').innerHTML = Arr.map((stu,i)=>
+            ` <div style="box-shadow:1px 1px 5px 1px gray; padding:20px; margin:20px;">
+                <button onclick="deleteStu(${i})">Delete</button>
+                <h2> Name: ${stu.name} </h2>
+                <h2> Email id: ${stu.email} </h2>
+                <h2> Full name: ${stu.fullname} </h2>
+                <h2> City: ${stu.city} </h2></div>`); 
+        }
+        function deleteStu(index){
+            Arr.splice(index,1);
+            localStorage.setItem('student', JSON.stringify(Arr));
+            showdata();
+        }
+        // function showdata(){
+        //     var stustring = localStorage.getItem('student');
+        //     stu = JSON.parse(stustring);
+        //     document.getElementById('StudentInfo').innerHTML = `
+        //     <h2> Name: ${stu.name} </h2>
+        //     <h2> Email id: ${stu.email} </h2>
+        //     <h2> Full name: ${stu.fullname} </h2>
+        //     <h2> City: ${stu.city} </h2>
+        //     `;          
+        // }
+
+
+    </script>
+</body>
+</html>

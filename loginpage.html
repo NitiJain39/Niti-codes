@@ -4,31 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 </head>
-<body>
-    <input type="username" placeholder="Enter Username :" id="uname"><br><br>
-    <input type="password" placeholder="Enter Password:" id="pass"><br><br>
-    <button type="button" onclick="login()">login</button>
+<body class="items-center justify-center text-center flex h-screen bg-slate-800">
+    <div class="items-center w-[400px] h-fit bg-zinc-300 justify-center p-8 shadow-lg shadow-sky-800 rounded-3xl border-[1.5px] border-indigo-800 hover:border-[3px] hover:border-blue-900">
+        <h2 class="text-2xl font-serif font-semibold">Login Your Account</h2><br><br>
+    <input type="username" placeholder="Enter Username :" id="uname" class="border-1 border-black rounded-2xl pl-6 w-3xs"><br><br>
+    <input type="password" placeholder="Enter Password:" id="pass" class="border-1 border-black rounded-2xl pl-6 w-3xs mb-5">
+    <p class="text-[15px] text-left ml-12"><br>Login As: <br>
+    <input type="radio" onclick="desg('admin')" name="role" placeholder="admin" id="admin" class="mr-2"> Admin 
+    <span class="mr-10"></span>
+    <input type="radio" onclick="desg('student')" name="role" placeholder="Student" id="Student" class="mr-2"> Student
+    </p><br>
+    <p class="text-[12px] text-left ml-12">If You do not have an Account <br>
+    <a href="Registration.html" class="border-b-1 border-b-slate-800 hover:border-b-blue-800 hover:border-b-[1.5px]">Register/Create new Account</a>
+    </p>
+    <button type="button" onclick="login()" class="rounded-[100px] bg-amber-200 border-2 hover:font-semibold hover:text-yellow-900 pb-3 pt-3 font-serif border-amber-300 text-center w-40 mt-8 hover:bg-yellow-400">Login</button>
     <h1 id="msg"></h1>
-    <script>
-        function login(){
-            var uname = document.getElementById("uname").value;
-            var pass = document.getElementById("pass").value;
-            var h1ele = document.getElementById("msg")
-            if(uname==""){
-                h1ele.innerHTML="Username cannnot be empty"
-                return
-            }
-            if(pass ==""){
-                h1ele.innerHTML="password is neccessary";
-            }
-            else if(uname=="Niti Jain" && pass=="1234"){
-                h1ele.innerHTML="Login Successful"
-            }
-            else{
-                h1ele.innerHTML="Login Fail"
-            }
-        }      
-    </script>
+    
+    </div>
+    <script src="QuesPaper.js"></script>
+    
 </body>
 </html>
