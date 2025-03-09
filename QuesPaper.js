@@ -3,7 +3,10 @@ var designation;
 function desg(d){
     designation=d;
 }
-function register(){
+
+function register(event){
+    event.preventDefault();
+
     var uname = document.getElementById("uname").value;
     var name = document.getElementById("name").value;
     var email = document.getElementById("email").value;
@@ -31,7 +34,8 @@ function register(){
         datas.push(Account);
         localStorage.setItem("Accounts",JSON.stringify(datas));
         h1ele.innerHTML="Account Registered Successfully"
-        window.location.href="loginpage.html";}
+        window.location.href="loginpage.html";
+    }
 
 
 function login(){
@@ -57,8 +61,7 @@ function login(){
     else{
         h1ele.innerHTML="Invalid Username or Password or Designation";
     }
-  }
-);    
+  });    
 };
 function logout(){
     window.location.href="loginpage.html";
@@ -67,7 +70,8 @@ function logout(){
 var ListQues = JSON.parse(localStorage.getItem("questions")) || [];
 var currIndex = 0;
 var ANSWERS=[];
-    function savedata(){
+    function savedata(event){
+        event.preventDefault();
         var que = document.getElementById("Q").value;
         var a = document.getElementById("A").value;
         var b = document.getElementById("B").value;
