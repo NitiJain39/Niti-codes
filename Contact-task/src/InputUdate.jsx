@@ -36,8 +36,8 @@ export default function InputUdate() {
                 ])
             }}>Submit</button>
             {
-                ListStudents.map((data,i)=> <StudentDetails
-                name={data.name}
+            ListStudents.map((data,i)=> <StudentDetails
+            name={data.name}
             surname={data.surname}
             age={data.age}
             address={data.address}

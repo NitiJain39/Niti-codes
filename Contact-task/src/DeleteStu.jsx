@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import StudentDetails from './assets/StudentDetails'
+import StudentDetails from './StudentDetails'
 var Students=[
     {name:"Neha",surname:"Sharma", age:22, address:"Navkar Nagar",city:"Khandwa"},
     {name:"Ishika",surname:"Raichand",age:22, address:"Navkar Nagar",city:"Khandwa"},
@@ -31,3 +31,22 @@ export default function DeleteStu() {
     </div>
   )
 }
+// const handleSubmit = (e) => {
+//   e.preventDefault();
+//   const savedContacts = JSON.parse(localStorage.getItem("Save")) || [];
+//   const newContact = {
+//       name: name,
+//       surname: surname,
+//       email: email,
+//       contact: contact,
+//       address: address,
+//   };
+//   const updatedContacts = [...savedContacts, newContact];
+//   setContactList(updatedContacts);
+//   localStorage.setItem("Save", JSON.stringify(updatedContacts));
+//   setName("");
+//   setSurName("");
+//   setemail("");
+//   setContact("");
+//   setAddress("");
+// };
